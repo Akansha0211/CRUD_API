@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './posts.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import DeleteForever from '@material-ui/icons/DeleteForever';
+import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
+import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 
 class Posts extends Component {
     state = { 
@@ -27,6 +30,11 @@ class Posts extends Component {
                             <p className="id">{post.id}</p>
                             <p className="title">{post.title}</p>
                             <p className="body">{post.body}</p>
+                            <div className="icon">
+                                <span className="icon"><ThumbUpAltIcon/></span>
+                                <span className="icon"><ThumbDownIcon/></span>
+                                <span className="icon"><DeleteForever/></span>
+                            </div>
                         </div>
                     )
                 })}
