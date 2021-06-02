@@ -14,8 +14,8 @@ class Comments extends Component {
     render() { 
         return ( 
             <div>
-                <table className="table">
-                    <thead>
+                <table className="table table-hover table-responsive-sm">
+                    <thead className="thead-dark">
                         <tr>
                             <th>Post Id</th>
                             <th>Id</th>
