@@ -7,6 +7,7 @@ import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import {Link} from 'react-router-dom';
+import SearchIcon from '@material-ui/icons/Search';
 
 
 
@@ -25,6 +26,9 @@ class Posts extends Component {
     render() { 
         return ( 
             <div>
+                <div className="search">
+                    <Link to="/search"><button><SearchIcon/></button></Link>
+                </div>
                 <Link to="/add/post">
                     <div className ="add-icon-parent">   
                         <AddCircleOutlineIcon  className="add_icon" />
