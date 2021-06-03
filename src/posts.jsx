@@ -23,9 +23,15 @@ class Posts extends Component {
         console.log(this.state.posts);
     }
     
-    // handleDelete = (id,e)=>{
-    //     axios.delete()
-    // }
+    handleDelete = (id,e)=>{
+        axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+            .then(response=>{
+                console.log(response);
+                console.log(response.data);
+            })
+        const posts = this.state.posts.filter(item=>item.id !==id);
+        this.setState({posts});    
+    }
 
     render() { 
         return ( 
