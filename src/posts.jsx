@@ -8,6 +8,7 @@ import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import {Link} from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
+import UpdateRoundedIcon from '@material-ui/icons/UpdateRounded';
 
 
 
@@ -52,8 +53,9 @@ class Posts extends Component {
                             <p className="title">{post.title}</p>          
                             <p className="body">{post.body}</p>
                             <div className="icon">
-                                <span className="icon icon-like"><ThumbUpAltIcon/></span>
-                                <span className="icon icon-dislike"><ThumbDownIcon/></span>
+                                <button className="icon"><UpdateRoundedIcon/></button>
+                                <button className="icon icon-like"><ThumbUpAltIcon/></button>
+                                <button className="icon icon-dislike"><ThumbDownIcon/></button>
                                 <button className="icon icon-delete" onClick={(e)=> this.handleDelete(post.id, e)}><DeleteForever/></button>
                             </div>
                         </div>

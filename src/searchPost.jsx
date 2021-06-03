@@ -25,7 +25,7 @@ class SearchPost extends Component {
                         <h2 className="text-center mb-5">Search A Post</h2>
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group mb-3">
-                                <input type="text" className="form-control" placeholder="Enter User Id" name="userId" value={userId} onChange={this.chnageHandler}></input>
+                                <input type="text" className="form-control" placeholder="Enter Post Id" name="userId" value={userId} onChange={this.chnageHandler}></input>
                             </div>
                             <center>
                                 <button className="btn btn-primary ">Search</button>
