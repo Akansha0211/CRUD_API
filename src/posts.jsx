@@ -10,6 +10,8 @@ import {Link} from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import UpdateRoundedIcon from '@material-ui/icons/UpdateRounded';
 
+import {Provider} from './context';
+
 
 
 class Posts extends Component {
@@ -56,7 +58,7 @@ class Posts extends Component {
                             <p className="body">{post.body}</p>
                             <div className="icon">
                                 <Link to="/post/update"><button className="icon"><UpdateRoundedIcon/></button></Link>
-                                <button className="icon icon-like"><ThumbUpAltIcon/></button>
+                                <button className="icon icon-like" onClick={this.handleLikes}><ThumbUpAltIcon/></button>
                                 <button className="icon icon-dislike"><ThumbDownIcon/></button>
                                 <button className="icon icon-delete" onClick={(e)=> this.handleDelete(post.id, e)}><DeleteForever/></button>
                             </div>

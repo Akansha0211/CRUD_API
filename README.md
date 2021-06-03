@@ -26,3 +26,13 @@
 ## Resources which helped:
 
 https://jsonplaceholder.typicode.com/guide/
+
+## Context API :
+
+Allows you to easily pass data at different levels of component tree without passing props to every level
+
+### 3 steps:
+
+1. createContext()
+2. provider
+3. consumer
