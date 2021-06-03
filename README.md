@@ -26,6 +26,7 @@
 ## Resources which helped:
 
 https://jsonplaceholder.typicode.com/guide/
+https://reactjs.org/docs/context.html
 
 ## Context API :
 
