@@ -34,7 +34,7 @@ class Posts extends Component {
                     const{userId, id, title, body} = post
                     return(
                         <div className="post card">
-                            
+                           
                             <div className="ids">
                                 <p className="userId badge alert-info">{post.userId}</p>
                                 <p className="id badge alert-warning">{post.id}</p>
