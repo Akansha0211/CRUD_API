@@ -23,6 +23,10 @@ class Posts extends Component {
         console.log(this.state.posts);
     }
     
+    // handleDelete = (id,e)=>{
+    //     axios.delete()
+    // }
+
     render() { 
         return ( 
             <div>
@@ -36,7 +40,7 @@ class Posts extends Component {
                     </div>
                 </Link>
                 {this.state.posts.map((post)=>{
-                    const{ title, body} = post
+                    const{ userId,id,title, body} = post
                     return(
                         <div className="post card">
                             <p className="title">{post.title}</p>          
@@ -44,7 +48,7 @@ class Posts extends Component {
                             <div className="icon">
                                 <span className="icon icon-like"><ThumbUpAltIcon/></span>
                                 <span className="icon icon-dislike"><ThumbDownIcon/></span>
-                                <span className="icon icon-delete"><DeleteForever/></span>
+                                <button className="icon icon-delete" onClick={(e)=> this.handleDelete(post.id, e)}><DeleteForever/></button>
                             </div>
                         </div>
                     )

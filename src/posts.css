@@ -15,7 +15,11 @@
   background-color: black;
   margin-right: 10px;
 }
-
+.icon {
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
 .add_icon {
   font-size: 30px;
   color: rgb(12, 167, 12);

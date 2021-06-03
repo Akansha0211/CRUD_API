@@ -12,7 +12,7 @@ class SearchPost extends Component {
      handleSubmit = async e =>{
         e.preventDefault(); 
         console.log(this.state);
-        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${this.state.userId}`)
+        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${this.state.userId}`)
         const data = response.data;
         console.log(data)
      }
