@@ -3,6 +3,7 @@ import Posts from './posts';
 import Comments from './comments';
 import AddPost from './addPost';
 import SearchPost from './searchPost';
+import UpdatePost from './updatePost';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route exact path ='/comments' component={Comments}/>
         <Route exact path ="/add/post" component={AddPost}/>
         <Route exact path='/post/userId' component={SearchPost}></Route>
+        <Route exact path='/post/update' component={UpdatePost}/>
       </Switch>
     </Router>
   );

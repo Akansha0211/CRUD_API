@@ -16,6 +16,7 @@ class Posts extends Component {
     state = { 
         posts:[]
      };
+     //To manage GET REQUESTS FROM JSON API
     async componentDidMount(){
         const url = "https://jsonplaceholder.typicode.com/posts";
         const response = await axios.get(url);
@@ -24,6 +25,7 @@ class Posts extends Component {
         console.log(this.state.posts);
     }
     
+    // To manage DELETE REQUESTS
     handleDelete = (id,e)=>{
         axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
             .then(response=>{
@@ -53,7 +55,7 @@ class Posts extends Component {
                             <p className="title">{post.title}</p>          
                             <p className="body">{post.body}</p>
                             <div className="icon">
-                                <button className="icon"><UpdateRoundedIcon/></button>
+                                <Link to="/post/update"><button className="icon"><UpdateRoundedIcon/></button></Link>
                                 <button className="icon icon-like"><ThumbUpAltIcon/></button>
                                 <button className="icon icon-dislike"><ThumbDownIcon/></button>
                                 <button className="icon icon-delete" onClick={(e)=> this.handleDelete(post.id, e)}><DeleteForever/></button>
