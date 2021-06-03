@@ -31,14 +31,9 @@ class Posts extends Component {
                     </div>
                 </Link>
                 {this.state.posts.map((post)=>{
-                    const{userId, id, title, body} = post
+                    const{ title, body} = post
                     return(
                         <div className="post card">
-                           
-                            <div className="ids">
-                                <p className="userId badge alert-info">{post.userId}</p>
-                                <p className="id badge alert-warning">{post.id}</p>
-                            </div>
                             <p className="title">{post.title}</p>          
                             <p className="body">{post.body}</p>
                             <div className="icon">
