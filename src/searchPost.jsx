@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class SearchPost extends Component {
     state = { 
-        userId:''
+        userId:'',
      };
 
      chnageHandler = (e) =>{
          this.setState({[e.target.name]:e.target.value})
      }
-     handleSubmit = (e) =>{
+     handleSubmit = async e =>{
         e.preventDefault(); 
         console.log(this.state);
+        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${this.state.userId}`)
+        const data = response.data;
+        console.log(data)
      }
     render() { 
         const{userId} = this.state;
@@ -20,9 +24,12 @@ class SearchPost extends Component {
                     <div className="w-75 mx-auto shadow p-5">
                         <h2 className="text-center mb-5">Search A Post</h2>
                         <form onSubmit={this.handleSubmit}>
-                            <div className="form-group">
+                            <div className="form-group mb-3">
                                 <input type="text" className="form-control" placeholder="Enter User Id" name="userId" value={userId} onChange={this.chnageHandler}></input>
                             </div>
+                            <center>
+                                <button className="btn btn-primary ">Search</button>
+                            </center>
                         </form>
                     </div>
                 </div>
