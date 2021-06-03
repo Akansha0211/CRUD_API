@@ -12,7 +12,7 @@ function App() {
         <Route exact path ='/' component={Posts}/>
         <Route exact path ='/comments' component={Comments}/>
         <Route exact path ="/add/post" component={AddPost}/>
-        <Route exact path='/search' component={SearchPost}></Route>
+        <Route exact path='/post/userId' component={SearchPost}></Route>
       </Switch>
     </Router>
   );

@@ -22,3 +22,7 @@
 ### Update a post | PUT | /posts/:id
 
 ### Delete a post | DELETE | /posts/:id
+
+## Resources which helped:
+
+https://jsonplaceholder.typicode.com/guide/

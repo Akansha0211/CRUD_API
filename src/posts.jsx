@@ -27,7 +27,7 @@ class Posts extends Component {
         return ( 
             <div>
                 <div className="search">
-                    <Link to="/search"><button className="search-icon"><SearchIcon/></button></Link>
+                    <Link to="/post/userId"><button className="search-icon"><SearchIcon/></button></Link>
                     <span className="search-text">Search Post</span>
                 </div>
                 <Link to="/add/post">
