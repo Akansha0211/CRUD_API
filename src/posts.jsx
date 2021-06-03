@@ -6,13 +6,14 @@ import DeleteForever from '@material-ui/icons/DeleteForever';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import {Link} from 'react-router-dom';
+
 
 
 class Posts extends Component {
     state = { 
         posts:[]
      };
-
     async componentDidMount(){
         const url = "https://jsonplaceholder.typicode.com/posts";
         const response = await axios.get(url);
@@ -24,9 +25,11 @@ class Posts extends Component {
     render() { 
         return ( 
             <div>
-                <div className ="add-icon-parent">
-                    <span className="add_icon"><AddCircleOutlineIcon/></span>
-                </div>
+                <Link to="/add/post">
+                    <div className ="add-icon-parent">   
+                        <AddCircleOutlineIcon  className="add_icon" />
+                    </div>
+                </Link>
                 {this.state.posts.map((post)=>{
                     const{userId, id, title, body} = post
                     return(
@@ -39,9 +42,9 @@ class Posts extends Component {
                             <p className="title">{post.title}</p>          
                             <p className="body">{post.body}</p>
                             <div className="icon">
-                                <span className="icon"><ThumbUpAltIcon/></span>
-                                <span className="icon"><ThumbDownIcon/></span>
-                                <span className="icon"><DeleteForever/></span>
+                                <span className="icon icon-like"><ThumbUpAltIcon/></span>
+                                <span className="icon icon-dislike"><ThumbDownIcon/></span>
+                                <span className="icon icon-delete"><DeleteForever/></span>
                             </div>
                         </div>
                     )

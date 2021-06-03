@@ -9,12 +9,23 @@
 }
 .add_icon {
   font-size: 30px;
-  color: red;
+  color: rgb(12, 167, 12);
   margin-left: auto;
   order: 2;
+  transform: scale(1.8);
+  margin-bottom: 20px;
+}
+.add_icon:hover {
+  cursor: pointer;
 }
 .icon {
   padding-right: 20px;
+}
+.icon:hover {
+  cursor: pointer;
+}
+.icon-delete {
+  color: red;
 }
 .ids {
   display: flex;
