@@ -4,6 +4,21 @@
   padding: 15px;
   margin-bottom: 20px;
 }
+.add-icon-parent {
+  display: flex;
+}
+.add_icon {
+  font-size: 30px;
+  color: red;
+  margin-left: auto;
+  order: 2;
+}
 .icon {
   padding-right: 20px;
+}
+.ids {
+  display: flex;
+}
+.userId {
+  margin-right: 20px;
 }

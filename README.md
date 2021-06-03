@@ -11,10 +11,14 @@
 7. Use Redux or Context API to store Liked and Disliked Posts and list of posts
 8. Use a UI LIbrary (Preferrably Material-UI or Semantic React)
 
-### imp...
+## imp...
 
-Actions HTTP | Methods | Endpoints
-Get all posts | GET | /posts
-Create a post | POST | /posts
-Update a post | PUT | /posts/:id
-Delete a post | DELETE | /posts/:id
+### Actions HTTP | Methods | Endpoints
+
+### Get all posts | GET | /posts
+
+### Create a post | POST | /posts
+
+### Update a post | PUT | /posts/:id
+
+### Delete a post | DELETE | /posts/:id
