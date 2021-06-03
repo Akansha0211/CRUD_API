@@ -7,6 +7,15 @@
 .add-icon-parent {
   display: flex;
 }
+.search {
+  display: flex;
+}
+.search-icon {
+  color: #fff;
+  background-color: black;
+  margin-right: 10px;
+}
+
 .add_icon {
   font-size: 30px;
   color: rgb(12, 167, 12);
