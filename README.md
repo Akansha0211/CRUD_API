@@ -1,5 +1,7 @@
 # ASSIGNMENT
 
+Live Link : https://crud-api-b1c7c.web.app/
+
 ### Requirements , Functionalities and Problem statement
 
 1. You need to develop a CRUD (Create, Read, Update and Delete) for posts.
